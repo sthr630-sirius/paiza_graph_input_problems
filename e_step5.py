@@ -1,0 +1,14 @@
+"""
+degree euler graph, directed graph
+"""
+n, m, v = map(int, input().split())
+outdegree = [0]*n
+indegree = [0]*n
+for _ in range(m):
+    a, b = map(int, input().split())
+    a -= 1
+    b -= 1
+    outdegree[a] += 1
+    indegree[b] += 1
+
+print(outdegree[v-1], indegree[v-1])
